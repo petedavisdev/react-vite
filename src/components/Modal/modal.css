@@ -1,0 +1,16 @@
+.modal {
+    position: fixed;
+    inset: 0;
+    display: grid;
+    place-content: center;
+    background-color: #0006;
+}
+
+.modal__dialog {
+    display: grid;
+    place-content: center;
+    background-color: white;
+    min-width: 33vw;
+    margin: 1em;
+    padding: 1em;
+}
