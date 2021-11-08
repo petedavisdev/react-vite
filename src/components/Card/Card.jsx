@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Modal } from "../Modal/Modal";
-import "./card.css";
+import styles from "../Card/Card.module.css";
 
 export function Card(props) {
     const [modalIsOpen, setModalIsOpen] = useState(false);
@@ -14,7 +14,7 @@ export function Card(props) {
     }
 
     return (
-        <div className="card">
+        <div className={styles.card}>
             <h2>{props.text}</h2>
 
             <button type="button" onClick={handleDelete}>

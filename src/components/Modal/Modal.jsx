@@ -1,7 +1,9 @@
+import styles from "./Modal.module.css";
+
 export function Modal(props) {
     return (
-        <div className="modal">
-            <div className="modal__dialog">
+        <div className={styles.modal}>
+            <div className={styles.modal__dialog}>
                 <p>Are you sure you want to delete {props.text}?</p>
 
                 <section>
