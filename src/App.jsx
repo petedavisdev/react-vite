@@ -1,5 +1,21 @@
 import React from "react";
 import { Card } from "./components/Card/Card";
+import { Form } from "./components/Form/Form";
+
+const data = [
+    {
+        text: "Learn React",
+    },
+    {
+        text: "Learn Next",
+    },
+    {
+        text: "Learn Vercel",
+    },
+    {
+        text: "Prep workshop",
+    },
+];
 
 function App() {
     return (
@@ -8,10 +24,12 @@ function App() {
                 <h1>Todos:</h1>
             </header>
 
+            <Form />
+
             <main>
-                <Card text="Learn React" />
-                <Card text="Learn Next" />
-                <Card text="Prep Next workshop" />
+                {data.map((todo, index) => (
+                    <Card text={todo.text} key={index} />
+                ))}
             </main>
         </div>
     );
