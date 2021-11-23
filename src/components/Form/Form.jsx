@@ -1,12 +1,12 @@
 import { useRef } from "react";
 import classes from "./Form.module.css";
 
-export function Form(props) {
+export function Form({ submitTodo }) {
     const textInputRef = useRef();
 
     function handleSubmit(event) {
         event.preventDefault();
-        props.submitTodo(textInputRef.current.value);
+        submitTodo(textInputRef.current.value);
     }
 
     return (

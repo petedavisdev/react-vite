@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Modal } from "../Modal/Modal";
 import styles from "../Card/Card.module.css";
 
-export function Card(props) {
+export function Card({ text }) {
     const [modalIsOpen, setModalIsOpen] = useState(false);
 
     function handleDelete() {
@@ -15,13 +15,13 @@ export function Card(props) {
 
     return (
         <div className={styles.card}>
-            <h2>{props.text}</h2>
+            <h2>{text}</h2>
 
             <button type="button" onClick={handleDelete}>
                 Delete
             </button>
 
-            {modalIsOpen && <Modal text={props.text} onCancel={handleCancel} />}
+            {modalIsOpen && <Modal text={text} onCancel={handleCancel} />}
         </div>
     );
 }

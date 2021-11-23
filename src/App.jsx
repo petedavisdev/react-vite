@@ -30,7 +30,7 @@ function App() {
 
             const data = await response.json();
 
-            setToDoList([...todoList, data]);
+            setToDoList((prevTodoList) => [...prevTodoList, data]);
         } catch (err) {
             console.error(err);
         }
